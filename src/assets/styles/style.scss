@@ -1,0 +1,313 @@
+@import "./../../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "./../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+$dark: rgb(59, 59, 59);
+$main: rgb(67, 10, 173);
+
+body {
+  margin: 0;
+  font-family: Assistant, sans-serif;
+  color: $dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 800px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 768px;
+
+  #controls {
+    text-align: center;
+
+    p {
+      margin: 20px auto 16px;
+    }
+
+    button {
+      background-color: $main;
+      border: 0px;
+      font-family: Assistant, sans-serif;
+      color: white;
+      font-size: 16px;
+      padding: 12px 18px;
+      margin: 0 0 0 12px;
+      opacity: .75;
+      transition: 300ms;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        opacity: .9;
+      }
+
+      &:active {
+        transition: 0ms;
+        opacity: 1;
+      }
+    }
+  }
+
+  #slideshow {
+    max-width: 100%;
+    cursor: default !important;
+
+    .glide__arrow {
+      border: 2px solid $main;
+      background-color: $main;
+      transition: 300ms;
+
+      &:hover {
+        border: 2px solid $main;
+        opacity: .7;
+      }
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    #chart-container {
+
+      ul {
+        margin: 0;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        padding-inline-start: 0px;
+
+        li {
+          margin: 0;
+          padding: 0;
+
+          .day--holidays {
+            cursor: pointer;
+            transition: 300ms;
+            stroke: transparent;
+            stroke-width: 2;
+            stroke-linecap: round;
+
+            &[data-selected=true] {
+              stroke: red;
+            }
+
+            &:hover {
+              opacity: .7;
+            }
+          }
+        }
+
+        .month-name {
+          fill: $dark;
+          font-weight: 500;
+        }
+
+        .month-day {
+          font-weight: 700;
+          fill: #FFF;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.tippy-box {
+  pointer-events: all !important;
+  cursor: default !important;
+  border: 2px solid $main !important;
+  box-shadow: 0 4px 14px -2px rgba(0, 8, 16, .25) !important;
+  max-width: 350px !important;
+
+  .tippy-content {
+
+    .holidays--date {
+      text-align: center;
+      color: $dark;
+
+      .holidays--date-month {
+        margin: 12px auto 0;
+        font-weight: 500;
+      }
+
+      .holidays--date-day {
+        margin: -6px auto 8px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    .holidays--exit {
+      cursor: pointer;
+      transition: 300ms;
+    }
+
+    .holidays--exit {
+      fill: $main;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      :hover {
+        opacity: .9;
+      }
+    }
+
+    .holidays--container {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      max-height: calc(75vh - 100px) !important;
+    }
+
+    .holidays--holiday {
+      font-size: 12px;
+      flex-wrap: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      
+      .holidays--holiday-name {
+        color: #fff;
+        background-color: $main;
+        padding: 2px 8px;
+        border-radius: 20px;
+        text-align: center;
+        margin: 6px 0 8px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 769px) {
+  #chart {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    transition: none !important;
+    transform: none !important;
+    max-width: 100% !important;
+    min-height: 977px;
+
+    li {
+      list-style: none;
+      margin: 0 !important;
+    }
+  }
+
+  .glide__arrows {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  div[data-tippy-root] {
+    .tippy-box {
+      max-width: calc(48vw - 40px) !important;
+    }
+  }
+
+  #chart {
+    min-height: 70vw;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+  }
+}
+
+
+
+@media (max-width: 650px) {
+  #controls p {
+    margin: 16px auto 10px;
+  }
+  
+  div[data-tippy-root] {
+    overflow: visible;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    max-width: 100% !important;
+    position: fixed !important;
+    transform: translate(50%, 50%) !important;
+
+    .tippy-box {
+      position: absolute;
+      left: 0 !important;
+      top: 0vw !important;
+      max-width: calc(100vw - 40px) !important;
+      transform: translate(-50%, -50%) !important;
+
+      .holidays {
+        div.holidays--date {
+          h4.holidays--date-month,
+          h3.holidays--date-day {
+            margin: 10px 2px 2px;
+            font-size: 16px;
+            display: inline-block;
+          }
+        }
+        .holidays--container {
+          max-height: calc(90vh - 100px) !important;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-height: 769px) and (max-width: 650px) {
+  div[data-tippy-root] {
+    .tippy-box {
+      .holidays {
+        .holidays--holiday {
+          h3.holidays--holiday-name {
+            margin: 4px 0 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 768px) and (min-width: 651px) {
+  .tippy-box {
+    max-width: calc(50vw - 50px) !important;
+    max-height: calc(100vh - 20px) !important;
+
+    .tippy-content {
+      .holidays--container {
+        max-height: calc(100vh - 100px) !important;
+      }
+    }
+  }
+}
+
+@media (max-height: 768px) and (min-width: 769px) {
+  .tippy-box {
+    max-width: 350px !important;
+  }
+}
