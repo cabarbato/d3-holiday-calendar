@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/d3-holiday-calendar/static/css/main.4f9a0a0e.chunk.css",
+    "main.js": "/d3-holiday-calendar/static/js/main.113296af.chunk.js",
+    "main.js.map": "/d3-holiday-calendar/static/js/main.113296af.chunk.js.map",
+    "runtime-main.js": "/d3-holiday-calendar/static/js/runtime-main.299b5a00.js",
+    "runtime-main.js.map": "/d3-holiday-calendar/static/js/runtime-main.299b5a00.js.map",
+    "static/css/2.da734ad0.chunk.css": "/d3-holiday-calendar/static/css/2.da734ad0.chunk.css",
+    "static/js/2.7ebe15e4.chunk.js": "/d3-holiday-calendar/static/js/2.7ebe15e4.chunk.js",
+    "static/js/2.7ebe15e4.chunk.js.map": "/d3-holiday-calendar/static/js/2.7ebe15e4.chunk.js.map",
+    "index.html": "/d3-holiday-calendar/index.html",
+    "precache-manifest.03ee89b00f19f5f0fc24ceb282bfea76.js": "/d3-holiday-calendar/precache-manifest.03ee89b00f19f5f0fc24ceb282bfea76.js",
+    "service-worker.js": "/d3-holiday-calendar/service-worker.js",
+    "static/css/2.da734ad0.chunk.css.map": "/d3-holiday-calendar/static/css/2.da734ad0.chunk.css.map",
+    "static/css/main.4f9a0a0e.chunk.css.map": "/d3-holiday-calendar/static/css/main.4f9a0a0e.chunk.css.map",
+    "static/js/2.7ebe15e4.chunk.js.LICENSE.txt": "/d3-holiday-calendar/static/js/2.7ebe15e4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.299b5a00.js",
+    "static/css/2.da734ad0.chunk.css",
+    "static/js/2.7ebe15e4.chunk.js",
+    "static/css/main.4f9a0a0e.chunk.css",
+    "static/js/main.113296af.chunk.js"
+  ]
+}
