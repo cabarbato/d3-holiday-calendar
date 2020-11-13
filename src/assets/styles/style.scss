@@ -3,10 +3,11 @@
 
 $dark: rgb(59, 59, 59);
 $main: rgb(67, 10, 173);
+$lite: rgb(231, 241, 134);
 
 body {
   margin: 0;
-  font-family: Assistant, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +34,7 @@ main {
     button {
       background-color: $main;
       border: 0px;
-      font-family: Assistant, sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       color: white;
       font-size: 16px;
       padding: 12px 18px;
@@ -97,7 +98,7 @@ main {
             stroke-linecap: round;
 
             &[data-selected=true] {
-              stroke: red;
+              stroke: $lite;
             }
 
             &:hover {
@@ -109,6 +110,8 @@ main {
         .month-name {
           fill: $dark;
           font-weight: 500;
+          text-transform: uppercase;
+          font-family: 'Oswald', sans-serif;
         }
 
         .month-day {
@@ -124,7 +127,7 @@ main {
 .tippy-box {
   pointer-events: all !important;
   cursor: default !important;
-  border: 2px solid $main !important;
+  border: 2px solid $lite !important;
   box-shadow: 0 4px 14px -2px rgba(0, 8, 16, .25) !important;
   max-width: 350px !important;
 

@@ -1,7 +1,14 @@
 
 ## 📅 D3 Holiday Calendar
 
-This is a calendar built using d3.js that pulls holidays from [Holiday API](https://holidayapi.com/). It uses tippy.js to create a hover tooltip for each day that that has at least one holiday.
+This is a calendar built using d3.js that pulls holidays from [Holiday API](https://holidayapi.com/). It uses tippy.js to create a hover tooltip for each day that that has at least one holiday. **[View the demo here.](https://cabarbato.github.io/d3-holiday-calendar/)**
+
+#### Progress: 
+![99%](https://progress-bar.dev/99/?width=400)
+
+- [x] Phase 1: Basic functionality
+- [x] Phase 2: Add tooltip on hover 
+- [ ] Phase 3: Link to Google Trend query 
 
 ---
 

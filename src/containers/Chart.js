@@ -69,9 +69,11 @@ class AppChart extends React.Component {
     componentDidMount() {
         var t = this,
             { onScreenWidthChange, onScreenHeightChange } = t.props;
-
+        // request the list of holidays
+        // a free key for dev purposes can be acquired from holidayapi.com
+        // the free version is limited to the previous year
         queue()
-            .defer(d3.json, `https://holidayapi.com/v1/holidays?pretty&key=${process.env.REACT_APP_HOLIDAY_API_KEY}&country=US&year=2019`) // a free key for dev purposes can be acquired from holidayapi.com
+            .defer(d3.json, `https://holidayapi.com/v1/holidays?pretty&key=${process.env.REACT_APP_HOLIDAY_API_KEY}&country=US&year=${new Date().getFullYear() - 1}`)
             .await(function (err, d) {
                 if (err) throw err;
                 t.setState({ data: d.holidays })

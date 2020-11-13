@@ -182,10 +182,10 @@ class AppCalendar extends React.Component {
 
         svg.append("text")
             .attr("class", "month-name")
-            .attr("y", cellSize / 2)
+            .attr("y", cellSize / 1.5)
             .attr("x", function (d) { return (((cellSize * daysOfTheWeek) + (cellMargin * (daysOfTheWeek))) / 2) + ((cellMargin + gutter) / 2); })
             .attr("text-anchor", "middle")
-            .attr("style", `font-size:${cellSize / 2}px`)
+            .attr("style", `font-size:${cellSize / 1.5}px`)
             .text(function (d) { return fullMonthFormat(d); })
 
         var rectangle = svg.selectAll("rect.day")
@@ -197,7 +197,7 @@ class AppCalendar extends React.Component {
             .attr("data-selected", false)
             .attr("width", cellSize)
             .attr("height", cellSize)
-            .attr("rx", 0).attr("ry", 0)
+            .attr("rx", 3).attr("ry", 3)
             .style("fill", "#e7e7e7")
             .attr("x", function (d) { return (dayFormat(d) * cellSize) + (dayFormat(d) * cellMargin) + ((cellMargin + gutter) / 2); })
             .attr("y", function (d) { return ((weekFormat(d) - weekFormat(new Date(d.getFullYear(), d.getMonth(), 1))) * cellSize) + ((weekFormat(d) - weekFormat(new Date(d.getFullYear(), d.getMonth(), 1))) * cellMargin) + (cellSize + cellMargin / 2); })
