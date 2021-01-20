@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/d3-holiday-calendar/precache-manifest.03ee89b00f19f5f0fc24ceb282bfea76.js"
+  "/d3-holiday-calendar/precache-manifest.0452659a77ef95da694fe51154bac2eb.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "132b98fda26d69893b34dbed50b74aa9",
+    "revision": "498acd80f487fdf3b75afee89cfb4556",
     "url": "/d3-holiday-calendar/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/d3-holiday-calendar/static/css/2.da734ad0.chunk.css"
   },
   {
-    "revision": "b3e2214fc975a268b506",
+    "revision": "d75cce60692c8b5f2ff7",
     "url": "/d3-holiday-calendar/static/css/main.4f9a0a0e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/d3-holiday-calendar/static/js/2.7ebe15e4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b3e2214fc975a268b506",
-    "url": "/d3-holiday-calendar/static/js/main.113296af.chunk.js"
+    "revision": "d75cce60692c8b5f2ff7",
+    "url": "/d3-holiday-calendar/static/js/main.8258c5b9.chunk.js"
   },
   {
     "revision": "315e65cf50844e8007dd",
