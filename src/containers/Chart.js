@@ -72,6 +72,7 @@ class AppChart extends React.Component {
         // request the list of holidays
         // a free key for dev purposes can be acquired from holidayapi.com
         // the free version is limited to the previous year
+        console.log(new Date().getFullYear() - 1)
         queue()
             .defer(d3.json, `https://holidayapi.com/v1/holidays?pretty&key=${process.env.REACT_APP_HOLIDAY_API_KEY}&country=US&year=${new Date().getFullYear() - 1}`)
             .await(function (err, d) {

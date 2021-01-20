@@ -162,7 +162,8 @@ class AppCalendar extends React.Component {
             gutter = isDesktop ? 10 : 40,
             cellMargin = (selWidth / columns) / 50,
             cellSize = (((selWidth / daysOfTheWeek) - cellMargin) / columns) - (gutter / 2),
-            months = d3.timeMonth.range(sourceParse("2019-01-01"), sourceParse("2019-12-31"));
+            lastYear = new Date().getFullYear() - 1,
+            months = d3.timeMonth.range(sourceParse(`${lastYear}-01-01`), sourceParse(`${lastYear}-12-31`));
 
         t.destroyTooltips()
 
